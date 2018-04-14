@@ -1,0 +1,121 @@
+.page{
+	width: 900px;
+	margin-right: 150px;
+	margin-left: 150px;
+ /*background: #deb887;
+
+ //couleur a été changé
+*/ background: #795548;
+}
+header{
+	width: 900px;
+	height: 180px;
+	background: url(Media/Photo/backgroundimageheader.jpg);
+	text-align: center;
+}
+h1{
+	color: #ff0000;
+}
+#section{
+	width: 500px;
+	height: 400px;
+	float: left;
+	border : double;
+	margin-bottom: 30px;
+	margin-left: 10px;
+}
+#section li{
+	font-size: 20px;
+}
+#side{
+	width: 250px;
+	height: auto;
+	float: right;
+	margin-top: 0px;
+	border : double;
+	margin-bottom: 30px;
+	margin-right: 10px;
+}
+footer{
+	width: 890px;
+	height: 150px;
+	clear: both;
+	margin-top: 30px;
+	border-style: double;
+}
+nav{
+	width: 900px;
+	height: auto;
+	background-color: #000000;
+}
+nav ul{
+	list-style-type: none;
+	padding: 0px 20px 0px 20px;
+	margin :5px 0px 15px 0px;
+	overflow: hidden;
+	border-style: solid;
+	border-color: #000000;
+}
+nav li{
+	padding: 0px 20px 0px 20px;
+	float: left;
+	margin:10px;
+	color: #ffffff;
+}
+nav li a {
+	margin-right: 15px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #ffffff;
+}
+.footers{
+	width: 210px;
+	height: auto;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.footers li{
+	list-style-type: square;
+}
+a:hover{
+	color: #8b0000;
+}
+#tel{
+	float: left;
+	width: 25px;
+	margin-right: 10px;
+}
+#slider{
+	float: left;
+	margin-left: 10px;
+	margin-right:10px;
+}
+#prec{
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#suiv{
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 310px;
+}
+h3{
+	color: #8b0000;
+	text-decoration: underline;
+}
+section li{
+	list-style-type: square;
+}
+section a{
+	color: #00008b;
+}
+section h3{
+	padding-left: 10px;
+}
+#chercher{
+	margin-left: 10px;
+}
