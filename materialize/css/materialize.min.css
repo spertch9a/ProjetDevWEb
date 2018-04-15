@@ -20,4 +20,9 @@
 
 body { background: #bbdefb;}
 .container {background: #1565c0 ;}
+.row{background: #FFFF;}
 .nav-wrapper{background: #2196f3;}
+#showcase{border: double; }
+#bigsection{background: #42a5f5;}
+#form{background: #90caf9;
+  margin-top: 15px;}
