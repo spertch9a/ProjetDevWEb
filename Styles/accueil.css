@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Source+Sans+Pro');
+
+/*
+Imported fonts;
+
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    font-family: 'Do Hyeon', sans-serif;
+
+
+
+*/
+
 .page{
 	width: 900px;
 	margin-right: 150px;
@@ -5,7 +19,7 @@
  /*background: #deb887;
 
  //couleur a été changé
-*/ background: #795548;
+*/ background: #e8a15c;
 }
 header{
 	width: 900px;
@@ -14,8 +28,10 @@ header{
 	text-align: center;
 }
 h1{
-	color: #ff0000;
-}
+	font-family: 'Do Hyeon', sans-serif;
+color :  #b5510e;
+/*color: #ff0000;
+*/}
 #section{
 	width: 500px;
 	height: 400px;
@@ -31,12 +47,12 @@ h1{
 	width: 250px;
 	height: auto;
 	float: right;
-	margin-top: 0px;
+	margin-top: 15px;
 	border : double;
 	margin-bottom: 30px;
-	margin-right: 10px;
+	margin-right: 40px;
 }
-footer{
+footer{ background: #fbc17e;
 	width: 890px;
 	height: 150px;
 	clear: both;
@@ -69,6 +85,7 @@ nav li a {
 	color: #ffffff;
 }
 .footers{
+
 	width: 210px;
 	height: auto;
 	float: left;
@@ -92,12 +109,14 @@ a:hover{
 	margin-right:10px;
 }
 #prec{
+	background: #fbc17e;
 	float: left;
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
 }
 #suiv{
+	background: #fbc17e;
 	float: left;
 	margin-top: 10px;
 	margin-right: 10px;
@@ -106,6 +125,8 @@ a:hover{
 h3{
 	color: #8b0000;
 	text-decoration: underline;
+	text-underline-position: under;
+	text-decoration-skip: ink;
 }
 section li{
 	list-style-type: square;
@@ -114,8 +135,12 @@ section a{
 	color: #00008b;
 }
 section h3{
+
 	padding-left: 10px;
 }
 #chercher{
 	margin-left: 10px;
 }
+
+body{
+	background: #492f06;}
