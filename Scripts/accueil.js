@@ -1,4 +1,4 @@
-var images = ["maçon.jpg",
+/*var images = ["maçon.jpg",
 "plomberie.jpg",
 "elec.jpg",
 "autres.jpg"];
@@ -20,23 +20,15 @@ function precedent(){
 	}
 	slider.src=images[num];
 }
+*/
 
 
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/mydb";
 
-//Partie base de données :
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root"
-});
-
-con.connect(function(err) {
+MongoClient.connect(url, function(err, db) {
   if (err) throw err;
-  console.log("Connected!");
-  con.query("CREATE DATABASE mydb", function (err, result) {
-    if (err) throw err;
-    console.log("Database created");
-  });
+  console.log("Database created!");
+  db.close();
+});
 });
