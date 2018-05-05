@@ -4,51 +4,55 @@
 	<title>Inscription</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="inscription.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
 	<div class="page">
-	<nav>
+	<nav class="nav-wrapper" id="nav">
 		<ul>
-			<li><a href="file:///C:/Documents%20and%20Settings/Administrateur/Bureau/Projet/accueil.html"> Accueil </a></li>
-			<li><a href=""> Client </a></li>
-			<li><a href=""> Employé </a></li>
-			<li><a href="file:///C:/Documents%20and%20Settings/Administrateur/Bureau/Projet/inscription.html"> S'inscire </a></li>
-			<li> <img src="C:\Documents and Settings\Administrateur\Bureau\Projet\téléchargement.png"> N° local 041 35 26 94 </li>
+			<li><a href="accueil.html"> Accueil </a></li>
+			<li><a href="client.html"> Client </a></li>
+			<li><a href="workers.html"> Employé </a></li>
+			<li><a href="inscription.html"> S'inscire </a></li>
+			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
-	<form>
-		<fieldset id="info">
-			<legend>Information de base</legend>
-			<label for="mail">E-mail :</label> 
-			<input type="email" name="mail" id="mail" required placeholder="exemple@live.com"> <br> <br>
-			<label for="password">Mot de passe :</label>
-			<input type="password" name="password" id="password" required> <br> <br>
-			<label for="prenom">Nom :</label>
-			<input type="text" name="nom" id="nom" required> <br> <br>
-			<label for="prenom">Prenom :</label>
-			<input type="text" name="prenom" id="prenom" required> <br> <br>
-			Sexe : <br>
-			<input type="radio" name="sexe" value="Homme" id="Homme">
-			<label for="Homme"> Homme </label><br>
-			<input type="radio" name="sexe" value="Femme" id="Femme">
-			<label for="Femme"> Femme </label><br> <br>
-			<label for="naissance"> Date de naissance :</label>
-			<input type="date" name="naissance" id="naissance" required="">	<br>
-		</fieldset>
-
-		<fieldset id="info">
-			<legend>Intention</legend>
-			Votre intention est de devenir :
-			<input type="radio" name="int" value="Client" id="Client">
-			<label for="client">Client</label>
-			<input type="radio" name="int" value="Employé" id="Employe">
-			<label for="employe">Employé</label>
-			<input type="radio" name="int" value="Deux" id="Deux">
-			<label for="deux">Les deux</label>
-		</fieldset>
-		<br>
-		<input type="submit" value="S'inscrire" id="button">
-	</form>
+	<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+        	<label for="first_name">First Name</label>
+          <input  id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s6">
+        	<label for="last_name">Last Name</label>
+          <input id="last_name" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  type="date" class="validate">
+          <label for="disabled">Date</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+    </form>
+  </div>
 </div>
 </body>
 </html>

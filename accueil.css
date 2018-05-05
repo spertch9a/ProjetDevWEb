@@ -1,0 +1,105 @@
+.page{
+	width: 920px;
+	margin-right: 150px;
+	margin-left: 150px;
+ /*background: #deb887;
+ //couleur a été changé
+*/ background: #90caf9;
+}
+#nav{
+	background: #d32f2f ;
+}
+header{
+	width: 900px;
+	height: 180px; 
+	text-align: center;
+}
+h1{
+	color: #ff0000;
+}
+#section{
+	width: 500px;
+	height: 450px;
+	float: left;
+	border : double;
+	margin-bottom: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+#section li{
+	font-size: 20px;
+}
+#side{
+	width: 250px;
+	height: auto;
+	float: right;
+	margin-top: 0px;
+	border : double;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+footer{
+	width: 890px;
+	height: 180px;
+	clear: both;
+	margin-top: 30px;
+	border-style: double;
+}
+#footers{
+	width: 230px;
+	height: auto;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#footers li{
+	list-style-type: square;
+	color: #0d47a1 ;
+	margin-left: 10px;
+}
+#footers li a{
+	color: #ffffff;
+}
+#footers li a:hover{
+	color :#aa00ff;
+}
+a:hover{
+	color: #90caf9;
+}
+#tel{
+	float: left;
+	width: 25px;
+	margin : 16px 10px 10px 10px;
+}
+#slider{
+	float: left;
+	margin-left: 10px;
+	margin-right:10px;
+}
+#prec{
+	float: left;
+	margin-left: 10px;
+}
+#suiv{
+	float: left;
+	margin-left: 240px;
+}
+#h3{
+	font-size: 15px;
+	color: #8b0000;
+	text-decoration: underline;
+}
+section li{
+	list-style-type: square;
+}
+section a{
+	color: #00008b;
+}
+section h3{
+	padding-left: 10px;
+}
+#chercher{
+	margin-left: 10px;
+}

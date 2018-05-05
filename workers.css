@@ -1,0 +1,19 @@
+.page{
+	width: 920px;
+	margin-right: 150px;
+	margin-left: 150px;
+ /*background: #deb887;
+ //couleur a été changé
+*/ background: #90caf9;
+}
+#nav{
+	background: #d32f2f ;
+}
+#tel{
+	float: left;
+	width: 25px;
+	margin : 16px 10px 10px 10px;
+}
+a:hover{
+	color: #90caf9;
+}

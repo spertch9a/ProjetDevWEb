@@ -2,6 +2,7 @@
 	width: 900px;
 	margin-right: 150px;
 	margin-left: 150px;
+	background: #ffffff;
 }
 #info{
 	background: #F0FFFF;
@@ -13,29 +14,8 @@
 	background: #F0FFFF;
 	color: #000000;
 }
-nav{
-	width: 900px;
-	height: auto;
-	background: #000000;
-}
-nav ul{
-	list-style-type: none;
-	padding: 0px 20px 0px 20px;
-	margin :5px 0px 15px 0px;
-	overflow: hidden;
-	border : solid #000000;
-}
-nav li{
-	padding: 0px 20px 0px 20px;
-	float: left;
-	margin:10px;
-	color: #ffffff;
-}
-nav li a {
-	margin-right: 15px;
-	text-decoration: none;
-	font-size: 20px;
-	color: #ffffff;
+#nav{
+	background: #d32f2f ;
 }
 img{
 	float: left;
@@ -44,4 +24,16 @@ img{
 }
 a:hover{
 	color: #8b0000;
+}
+#tel{
+	float: left;
+	width: 25px;
+	margin : 16px 10px 10px 10px;
+}
+#submit{
+	margin-left: 700px;
+	margin-bottom: 10px;
+}
+a:hover{
+	color: #90caf9;
 }

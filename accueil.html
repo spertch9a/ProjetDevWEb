@@ -1,47 +1,41 @@
 <!DOCTYPE html>
-<!-- NOTES:
-
-1-changer le chemin ablosu en chemin relatif (hadi tani tache a faire )
-
-Taches:
-
-Les couleurs sont a changer
-Les images de bord a changer
-Essayer d'avoir des photos réels des proffessions(mba3de mour les incscription nbaynou les photos ta3 nas li hatou des annonces deja).
-
-
- -->
 
 <html>
 <head>
 	<title>Accueil</title>
+
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="Styles/accueil.css">
-	<script type="text/javascript" src="Scripts/accueil.js"></script>
+    <link rel="stylesheet" type="text/css" href="accueil.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+	<script type="text/javascript" src="accueil.js"></script>
 </head>
 <body>
 	<div class="page">
 	<header>
 		<h1>Bienvenue sur notre site </h1>
 	</header>
-	<nav>
+          
+	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
-			<li><a href=""> Client </a></li>
-			<li><a href=""> Employé </a></li>
+			<li><a href="client.html"> Client </a></li>
+			<li><a href="workers.html"> Employé </a></li>
 			<li><a href="inscription.html"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
+
 	<section>
 		<section id="section">
-			<h3>Regarder les differents choix :</h3>
+			<h3 id="h3">Regarder les differents choix :</h3>
 			<img id="slider" src="maçon.jpg" width="450px" height="300px" usemap="maçonmap">
-			<button id="prec" onclick="precedent()"> Précedent</button>
-			<button id="suiv" onclick="suivant()">Suivant</button>
+			<button  id="prec" class="btn waves-effect waves-light" name="action" onclick="precedent()"> Précedent</button>
+			<button id="suiv" class="btn waves-effect waves-light" name="action" onclick="suivant()">Suivant</button>
 		</section>
+
 		<aside id="side">
-			<h3>Indications sur le site :</h3>
+			<h3 id="h3">Indications sur le site :</h3>
 			<ul>
 			<li>Si vous êtes un client veuillez vous dériger sur le lien client en haut de la page. </li>
             <li>Si vous êtes un employé veuillez vous dériger sur le lien employé en haut de la page. </li>
@@ -54,8 +48,8 @@ Essayer d'avoir des photos réels des proffessions(mba3de mour les incscription 
 
 <footer>
 
-	<aside class="footers">
-		<h3>Nos domaines</h3>
+	<aside id="footers">
+		<h3 id="h3">Nos domaines</h3>
 		<ul>
 			<li><a href="#"> Plomberie</a></li>
 			<li><a href="#"> Menuiserie </a></li>
@@ -64,16 +58,16 @@ Essayer d'avoir des photos réels des proffessions(mba3de mour les incscription 
 		</ul>
 	</aside>
 
-	<aside class="footers">
-		<h3>Nos  meilleurs offres</h3>
+	<aside id="footers">
+		<h3 id="h3">Nos  meilleurs offres</h3>
 		<ul>
 			<li><a href="#"> Nos tarifs pour les clients</a></li>
 			<li><a href="#"> Nos tarifs pour les  employés</a></li>
 		</ul>
 	</aside>
 
-	<aside class="footers">
-		<h3>A propos de nous</h3>
+	<aside id="footers">
+		<h3 id="h3">A propos de nous</h3>
 		<ul>
 			<li><a href="#">Consulter notre historique</a></li>
 		</ul>
