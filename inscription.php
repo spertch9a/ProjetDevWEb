@@ -1,25 +1,14 @@
 <?php
-$username = filer_input(INPUT_POST,'username');
-
-
-
-//connection to the database
-$connection = new PDO(
-  'mysql:host = local;   dbname=devweb',
-//login username
-  'root',
-//password
-  'root'
-);
-
 
 $username = filter_input(INPUT_POST, 'username');
+
+$datedenaissance = _POST['datedenaissance'];
 $password = filter_input(INPUT_POST, 'password');
 if (!empty($username)){
 if (!empty($password)){
 $host = "localhost";
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "root";
 $dbname = "youtube";
 
 // Create connection
@@ -30,8 +19,9 @@ if (mysqli_connect_error()){
    . mysqli_connect_error());
 }
 else{
- $sql = "INSERT INTO account (username, password)
- values ('$username','$password')";
+ $sql = "INSERT INTO user (username, password,datedenaissance)
+ values ('$username','$password','$datedenaissance')";
+
  if ($conn->query($sql)){
    echo "New record is inserted sucessfully";
  }
