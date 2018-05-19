@@ -4,6 +4,10 @@ $username = filter_input(INPUT_POST, 'username');
 
 $datedenaissance = _POST['datedenaissance'];
 $password = filter_input(INPUT_POST, 'password');
+
+
+
+
 if (!empty($username)){
 if (!empty($password)){
 $host = "localhost";
@@ -19,8 +23,8 @@ if (mysqli_connect_error()){
    . mysqli_connect_error());
 }
 else{
- $sql = "INSERT INTO user (username, password,datedenaissance)
- values ('$username','$password','$datedenaissance')";
+ $sql = "INSERT INTO user (nom,prenom,username,password,email,datedenaissance)
+ values ('$firstname','$lastname','$username','$password',,'$email','$datedenaissance','$typeofuser')";
 
  if ($conn->query($sql)){
    echo "New record is inserted sucessfully";
