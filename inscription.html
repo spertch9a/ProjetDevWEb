@@ -19,45 +19,61 @@
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
-	<div class="row">
-    <form class="col s12" method="post" action="inscription.php">
-      <div class="row">
-        <div class="input-field col s6">
-        <!-- First name: -->
-          <input name="firstname"type="text" class="validate">
-        </div>
-				<!-- Last name:  -->
-				<div class="input-field col s6">
-			 <input name="lastname" type="text" class="validate">
-			 <label for="lasname">Last Name</label>
-		 </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <!-- Date:   -->
-				<input name="datedenaissance"  type="date" class="validate">
 
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
+    <form  method="post" action="inscription.php">
+
+       <br>    <!-- First name: -->
+
+          <label for="nom" id="nom">Nom :</label>
+          <input name="nom"type="text" id="nom" placeholder="Entrez votre nom">
+
+				<!-- Last name:  -->
+        <br>
+
+			 <label for="prenom" id="prenom">Prenom :</label>
+        <input name="prenom" type="text" id="prenom" placeholder="Entrez votre prenom">
+        <br>
+        <!-- Date:   -->
+
+        <label for="username" id="username"> Identifiant :</label>
+        <input name="username"  type="text" id="username" placeholder="Entrez votre identifiant" >
+
+        <br>
+
+
         <!-- Email:  -->
-				 <input name="email "type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input name="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
+
+          <label for="email" id="email">Email :</label>
+          <input name="email "type="email" id="email" placeholder="Entrez votre mail" >
+        <br>
+
+          <label for="password" id="password">Password :</label>
+          <input name="password" type="password" id="password" placeholder="Entrez votre mot de passe">
+        <br>
+
+        <label for="datedenaissance" id="datedenaissance"> Date de naissance :</label>
+        <input type="text" name="datedenaissance" value="" id="datedenaissance" >
+
+        <br>
+
+        Vous êtes : <br>
+        <input type="radio" name="typeofuser" value="client" id="client">
+        <label for="client"> Client </label> <br>
+        <input type="radio" name="typeofuser" value="worker" id="worker">
+        <label for="worker"> Worker</label> <br>
+        <input type="radio" name="typeofuser" value="both" id="both">
+        <label for="both"> Both </label>
+
+
+        <br>
+
       <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
+
   </button>
     </form>
   </div>
-</div>
+
 
  <script type="text/javascript" src="materialize.min.js"></script>
 </body>

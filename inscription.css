@@ -37,3 +37,8 @@ a:hover{
 a:hover{
 	color: #90caf9;
 }
+#nom,#prenom,#email,#password,#username,#datedenaissance,#client,#worker,#both{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}

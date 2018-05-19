@@ -1,5 +1,5 @@
 var images = ["maçon.jpg",
-"plomberie.jpg",
+"plomberie.jpg","slider1","calcul-retraite-macon",
 "elec.jpg",
 "autres.jpg"];
 var num=0;
