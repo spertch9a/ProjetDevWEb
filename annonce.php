@@ -15,12 +15,14 @@
 			padding: 1%;
 		}
 	</style>
+<link rel="icon" href="icone.jpg">
 </head>
 <body>
 	<div class="page">
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
+      <li><a href="client.php"> Client </a></li>
 			<li><a href="annonce.php"> Annonces </a></li>
 			<li><a href="workers.php"> Employé </a></li>
 			<li><a href="inscription.php"> S'inscire </a></li>
@@ -33,21 +35,21 @@
 			<form  method="post" action="ajouterannonce.php">
 				<div class="input-field">
 					<label for="titre" id="titre">Titre</label>
-						<input name="titre"type="text" id="titre" placeholder="Entrez votre titre">
+						<input name="titre"type="text" id="titre" placeholder="Entrez votre titre" required>
 				</div>
 
 				<div class="input-field">
 					<label for="delais" id="delais">
 						<span>Delais (jours)</span>
 					</label>
-					<input name="delais"type="text" id="delais" placeholder="Entrez votre delais">
+					<input name="delais"type="number" id="delais" placeholder="Entrez votre delais" required>
 				</div>
 
 				<div class="input-field">
 					<label for="budget" id="budget">
 						<span>Budget (Dinars Algerian)</span>
 					</label>
-						<input name="budget"type="text" id="budget" placeholder="Entrez votre budget">
+						<input name="budget"type="number" id="budget" placeholder="Entrez votre budget" required>
 				</div>
 
 					<!-- <div class="file-field input-field">
@@ -76,9 +78,10 @@
      while ($row = mysqli_fetch_array($result)) {
        echo "<div > <h3>";
        	echo $row['titre']. "</h3> <br>";
-				echo "<table> <tr> <td> Delais (jours ): " .$row['delais'] . " </td><td> Budget:  " .$row['budget'] ." Dinars  </td></tr></table>";
+				echo "<table> <tr> <td> Delais (jours ): " .$row['delais'] . " </td><td> Budget:  " .$row['budget'] ." Dinars </td> <td> Date ajouté: " .$row['dateadded']. " </td></tr></table>";
 				echo "";
 				echo "<h4>Description:  <h4> <br> <p>".$row['description']. "</p>";
+
        echo "</div> <br>";
 echo "__________________________________________________________________________________";
 echo "<br>";

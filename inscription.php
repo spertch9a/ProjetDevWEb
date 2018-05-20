@@ -6,13 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="inscription.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
-
+<link rel="icon" href="icone.jpg">
 </head>
 <body>
 	<div class="page">
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
+			<li><a href="client.php"> Client </a></li>
 			<li><a href="annonce.php"> Annonces </a></li>
 			<li><a href="workers.php"> Employé </a></li>
 			<li><a href="inscription.php"> S'inscire </a></li>

@@ -8,13 +8,14 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
 
-
+<link rel="icon" href="icone.jpg">
 </head>
 <body>
 	<div class="page">
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
+			<li><a href="client.php"> Client </a></li>
 			<li><a href="annonce.php"> Annonces </a></li>
 			<li><a href="workers.php"> Employé </a></li>
 			<li><a href="inscription.php"> S'inscire </a></li>
@@ -32,7 +33,7 @@
   <th>Identifiant</th>
   <th>Nom</th>
   <th>Prenom</th>
-	<th>Proffession</th>
+
 	<th>Email</th>
  </tr>
  <?php
@@ -41,15 +42,13 @@ $conn = mysqli_connect("localhost", "root", "root", "devweb");
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT username, nom, prenom ,email, proffession FROM user WHERE typeofuser ='client'  ";
+  $sql = "SELECT id, nom, prenom ,email FROM client  ";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["username"]. "</td><td>" . $row["nom"] . "</td><td>"
-. $row["prenom"]. "</td><td>"
-
-. $row["email"].  "</td></tr>";
+    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["nom"] . "</td><td>"
+. $row["prenom"]. "</td> <td> " .$row['email']. "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }

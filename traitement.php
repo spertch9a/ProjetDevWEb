@@ -24,11 +24,16 @@ if (!$conn) {
 $sql = "INSERT INTO user (nom, prenom, username, password, email, datedenaissance,typeofuser)
 VALUES ('$nom', '$prenom', '$pseudo' , '$motdepasse' , '$email' , '$datedenaissance' ,'$typeofuser')";
 //si l'utilisateur est un employeur
+$sql1 = "INSERT INTO `client` (`nom`, `prenom`, `username`, `password`, `email`, `datedenaissance`)
+VALUES ('$nom', '$prenom', '$pseudo', '$password', '$email', '$datedenaissance')";
 $sql2 = "INSERT INTO `Workers` (`nom`, `prenom`, `username`, `password`, `email`, `datedenaissance`, `proffession`)
 VALUES ('$nom', '$prenom', '$pseudo', '$password', '$email', '$datedenaissance', '$proffession')";
 if($typeofuser == 'worker') {
   mysqli_query($conn, $sql2) ;
+} else{ //si l'utilisateur a choisis client ou 'both'
+  mysqli_query($conn,$sql1);
 }
+
 if (mysqli_query($conn, $sql) ) {
    echo "New record created successfully";
 
