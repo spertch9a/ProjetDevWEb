@@ -6,15 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="inscription.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
-<<<<<<< HEAD
 	<style media="screen">
 		.form-container{
 			padding: 1%;
 		}
 	</style>
-=======
-
->>>>>>> 12380a37bd1b1eb35aee19ca3eb881823b374f7a
 </head>
 <body>
 	<div class="page">
