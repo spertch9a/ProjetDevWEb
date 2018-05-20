@@ -14,8 +14,8 @@
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
 			<li><a href="client.html"> Client </a></li>
-			<li><a href="workers.html"> Employé </a></li>
-			<li><a href="inscription.html"> S'inscire </a></li>
+			<li><a href="workers.php"> Employé </a></li>
+			<li><a href="inscription.php"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
@@ -44,7 +44,7 @@
         <!-- Email:  -->
 
           <label for="email" id="email">Email :</label>
-          <input name="email "type="email" id="email" placeholder="Entrez votre mail" >
+          <input name="email" type="email" id="email" placeholder="Entrez votre mail" >
         <br>
 
           <label for="password" id="password">Password :</label>
@@ -52,17 +52,23 @@
         <br>
 
         <label for="datedenaissance" id="datedenaissance"> Date de naissance :</label>
-        <input type="text" name="datedenaissance" value="" id="datedenaissance" >
+        <input type="date" name="datedenaissance" value="" id="datedenaissance" >
 
         <br>
 
         Vous êtes : <br>
-        <input type="radio" name="typeofuser" value="client" id="client">
-        <label for="client"> Client </label> <br>
-        <input type="radio" name="typeofuser" value="worker" id="worker">
-        <label for="worker"> Worker</label> <br>
-        <input type="radio" name="typeofuser" value="both" id="both">
-        <label for="both"> Both </label>
+        <label for="client">
+					<input type="radio" name="typeofuser" checked value="client" id="client">
+					<span>Client</span>
+				</label>
+        <label for="worker">
+					<input type="radio" name="typeofuser" value="worker" id="worker">
+        	<span>Worker</span>
+				</label>
+        <label for="both">
+					<input type="radio" name="typeofuser" value="both" id="both">
+					<span>Both</span>
+				 </label>
 
 
         <br>
@@ -76,5 +82,9 @@
 
 
  <script type="text/javascript" src="materialize.min.js"></script>
+ <script type="text/javascript">
+
+
+ </script>
 </body>
 </html>

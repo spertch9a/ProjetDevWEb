@@ -16,8 +16,8 @@
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
 			<li><a href="client.html"> Client </a></li>
-			<li><a href="workers.html"> Employé </a></li>
-			<li><a href="inscription.html"> S'inscire </a></li>
+			<li><a href="workers.php"> Employé </a></li>
+			<li><a href="inscription.php"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
@@ -30,6 +30,7 @@
   <th>Identifiant</th>
   <th>Nom</th>
   <th>Prenom</th>
+	<th>Proffession</th>
 	<th>Email</th>
  </tr>
  <?php
@@ -38,13 +39,13 @@ $conn = mysqli_connect("localhost", "root", "root", "devweb");
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT username, nom, prenom ,email FROM user";
+  $sql = "SELECT username, nom, prenom ,email, proffession FROM workers";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["username"]. "</td><td>" . $row["nom"] . "</td><td>"
-. $row["prenom"]. "</td><td>" . $row["email"]. "</td></tr>";
+. $row["prenom"]. "</td><td>" . $row["proffession"]. "</td><td>" . $row["email"]. "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
