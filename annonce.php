@@ -1,35 +1,7 @@
 <?php
-  // Create database connection
-  $db = mysqli_connect("localhost", "root", "root", "devweb");
-
-  // Initialize message variable
-  $msg = "";
-
-  // If upload button is clicked ...
-  if (isset($_POST['upload'])) {
-  	// Get image name
-  	$image = $_FILES['image']['name'];
-  	// Get text
-	$titre = mysqli_real_escape_string($db, $_POST['titre']);
-		$description = mysqli_real_escape_string($db, $_POST['description']);
-			$delais = mysqli_real_escape_string($db, $_POST['delais']);
-	$budget = mysqli_real_escape_string($db, $_POST['budget']);
-  	// image file directory
-  	$target = "annonces/".basename($image);
-
-  	$sql = "INSERT INTO annonce (titre,delais, budget,image,description)
-		VALUES ('$titre', '$delais','$budget','$image','$description')";
-  	// execute query
-  	mysqli_query($db, $sql);
-
-  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-  		$msg = "Image uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
-  }
-  $result = mysqli_query($db, "SELECT * FROM annonces");
-?>
+ $db = mysqli_connect("localhost", "root", "root", "devweb");
+ $result = mysqli_query($db, "SELECT * FROM annonce");
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +21,7 @@
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
-			<li><a href="client.php"> Client </a></li>
+			<li><a href="annonce.php"> Annonces </a></li>
 			<li><a href="workers.php"> Employé </a></li>
 			<li><a href="inscription.php"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
@@ -58,7 +30,7 @@
 
     <div class="form-container">
 			<h1>Annonce</h1>
-			<form  method="post" action="annonce.php">
+			<form  method="post" action="ajouterannonce.php">
 				<div class="input-field">
 					<label for="titre" id="titre">Titre</label>
 						<input name="titre"type="text" id="titre" placeholder="Entrez votre titre">
@@ -78,7 +50,7 @@
 						<input name="budget"type="text" id="budget" placeholder="Entrez votre budget">
 				</div>
 
-					<div class="file-field input-field">
+					<!-- <div class="file-field input-field">
 						<div class="btn">
 							<span>Image</span>
 							<input type="file" name="image">
@@ -86,7 +58,7 @@
 						<div class="file-path-wrapper">
 							<input class="file-path validate" type="text">
 						</div>
-					</div>
+					</div> -->
 					<div class="input-field">
 						<label for="Description" id="description">Description</label>
 						<textarea name="Description" id="Description" class="materialize-textarea" rows="8"></textarea>
@@ -97,6 +69,22 @@
 			</form>
     </div>
   </div>
+
+<div class="page">
+<h1>Annoces postés: </h1>
+	<?php
+     while ($row = mysqli_fetch_array($result)) {
+       echo "<div > <h3>";
+       	echo $row['titre']. "</h3> <br>";
+				echo "<table> <tr> <td> Delais (jours ): " .$row['delais'] . " </td><td> Budget:  " .$row['budget'] ." Dinars  </td></tr></table>";
+				echo "";
+				echo "<h4>Description:  <h4> <br> <p>".$row['description']. "</p>";
+       echo "</div> <br>";
+echo "__________________________________________________________________________________";
+echo "<br>";
+     }
+   ?>
+ </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>

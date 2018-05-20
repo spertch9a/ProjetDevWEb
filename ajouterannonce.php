@@ -1,29 +1,36 @@
 <?php
-  // Create database connection
-  $db = mysqli_connect("localhost", "root", "root", "devweb");
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "devweb";
 
-  // Initialize message variable
-  $msg = "";
+//retreiving data from date_create_from_format
 
-  // If upload button is clicked ...
-  if (isset($_POST['upload'])) {
-  	// Get image name
-  	$image = $_FILES['image']['name'];
-  	// Get text
-  	$image_text = mysqli_real_escape_string($db, $_POST['image_text']);
+$titre = ($_POST ['titre']) ? $_POST ['titre'] : "Pas De titre";
+$delais = ($_POST['delais']);
+$budget = ($_POST['budget']) ;
+$description = ($_POST['Description']);
 
-  	// image file directory
-  	$target = "images/".basename($image);
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+   die("Connection failed: " . mysqli_connect_error());
+}
 
-  	$sql = "INSERT INTO images (image, image_text) VALUES ('$image', '$image_text')";
-  	// execute query
-  	mysqli_query($db, $sql);
+$sql = "INSERT INTO annonce (titre,delais,budget,description) VALUES ('$titre','$delais','$budget','$description')";
 
-  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-  		$msg = "Image uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
-  }
-  $result = mysqli_query($db, "SELECT * FROM images");
+
+if (mysqli_query($conn, $sql) ) {
+   echo "New record created successfully";
+
+} else {
+   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+    header("http://localhost:8080/ProjetDevWEb/annonce.php");
+    exit;
+
 ?>

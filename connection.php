@@ -9,6 +9,6 @@
       header('REFRESH:5;URL=acceuil.php');
     }
   } else {
-    echo "You are not allowed to browser thi page"
+    echo "You are not allowed to browse this page"
   }
  ?>
