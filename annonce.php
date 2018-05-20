@@ -1,3 +1,35 @@
+<?php
+  // Create database connection
+  $db = mysqli_connect("localhost", "root", "root", "devweb");
+
+  // Initialize message variable
+  $msg = "";
+
+  // If upload button is clicked ...
+  if (isset($_POST['upload'])) {
+  	// Get image name
+  	$image = $_FILES['image']['name'];
+  	// Get text
+	$titre = mysqli_real_escape_string($db, $_POST['titre']);
+		$description = mysqli_real_escape_string($db, $_POST['description']);
+			$delais = mysqli_real_escape_string($db, $_POST['delais']);
+	$budget = mysqli_real_escape_string($db, $_POST['budget']);
+  	// image file directory
+  	$target = "annonces/".basename($image);
+
+  	$sql = "INSERT INTO annonce (titre,delais, budget,image,description)
+		VALUES ('$titre', '$delais','$budget','$image','$description')";
+  	// execute query
+  	mysqli_query($db, $sql);
+
+  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+  		$msg = "Image uploaded successfully";
+  	}else{
+  		$msg = "Failed to upload image";
+  	}
+  }
+  $result = mysqli_query($db, "SELECT * FROM annonces");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +62,7 @@
 
     <div class="form-container">
 			<h1>Annonce</h1>
-			<form  method="post" action="ajouterannonce.php">
+			<form  method="post" action="annonce.php">
 				<div class="input-field">
 					<label for="titre" id="titre">Titre</label>
 						<input name="titre"type="text" id="titre" placeholder="Entrez votre titre">
@@ -53,7 +85,7 @@
 					<div class="file-field input-field">
 						<div class="btn">
 							<span>Image</span>
-							<input type="file">
+							<input type="file" name="image">
 						</div>
 						<div class="file-path-wrapper">
 							<input class="file-path validate" type="text">

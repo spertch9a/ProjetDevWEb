@@ -15,7 +15,7 @@
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
-			<li><a href="client.html"> Client </a></li>
+			<li><a href="client.php"> Client </a></li>
 			<li><a href="workers.php"> Employé </a></li>
 			<li><a href="inscription.php"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
@@ -23,8 +23,10 @@
 	</nav>
 </div> <br>
 <div class="page">
+	<div id="titleee">
 
-<h1 style="">Liste des employeurs</h1> <br>
+		<h1 style="">Liste des employeurs :</h1> <br>
+	</div>
  <table class="highlight">
  <tr>
   <th>Identifiant</th>
