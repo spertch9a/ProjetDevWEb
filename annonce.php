@@ -29,7 +29,7 @@
 	</nav>
 
     <div class="form-container">
-			<h1>Annonce</h1>
+			<h1>Ajouter une annonce</h1>
 			<form  method="post" action="ajouterannonce.php">
 				<div class="input-field">
 					<label for="titre" id="titre">Titre</label>
