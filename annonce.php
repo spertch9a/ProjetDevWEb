@@ -1,6 +1,9 @@
 <?php
  $db = mysqli_connect("localhost", "root", "root", "devweb");
  $result = mysqli_query($db, "SELECT * FROM annonce");
+ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+   $user = $_SESSION['user']; // TODO: check this
+ }
  ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +33,7 @@
 
     <div class="form-container">
 			<h1>Annonce</h1>
-			<form  method="post" action="ajouterannonce.php">
+			<form  method="post" action="annonce.php">
 				<div class="input-field">
 					<label for="titre" id="titre">Titre</label>
 						<input name="titre"type="text" id="titre" placeholder="Entrez votre titre">
