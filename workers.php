@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Workers</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="workers.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
-</head>
-<body>
-
-
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
 
 		<title>Workers</title>
 		<meta charset="utf-8">
@@ -39,31 +22,35 @@
 		</ul>
 	</nav>
 </div> <br>
+<div class="page">
 
- <table>
+
+ <table class="highlight">
  <tr>
-  <th>Id</th>
-  <th>Username</th>
-  <th>Password</th>
+  <th>Identifiant</th>
+  <th>Nom</th>
+  <th>Prenom</th>
+	<th>Email</th>
  </tr>
  <?php
-$conn = mysqli_connect("localhost", "root", "root", "company");
+$conn = mysqli_connect("localhost", "root", "root", "devweb");
   // Check connection
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT id, username, password FROM login";
+  $sql = "SELECT username, nom, prenom ,email FROM user";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
-. $row["password"]. "</td></tr>";
+    echo "<tr><td>" . $row["username"]. "</td><td>" . $row["nom"] . "</td><td>"
+. $row["prenom"]. "</td><td>" . $row["email"]. "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
 $conn->close();
 ?>
 </table>
+</div>
 </body>
 </html>
