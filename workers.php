@@ -24,7 +24,7 @@
 </div> <br>
 <div class="page">
 
-<h1>Liste des employeurs</h1> <br>
+<h1 style="">Liste des employeurs</h1> <br>
  <table class="highlight">
  <tr>
   <th>Identifiant</th>
