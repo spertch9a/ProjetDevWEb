@@ -24,13 +24,14 @@ if (!$conn) {
 $sql = "INSERT INTO user (nom, prenom, username, password, email, datedenaissance,typeofuser)
 VALUES ('$nom', '$prenom', '$pseudo' , '$motdepasse' , '$email' , '$datedenaissance' ,'$typeofuser')";
 //si l'utilisateur est un employeur
-if($typeofuser == 'worker') {
 $sql2 = "INSERT INTO `Workers` (`nom`, `prenom`, `username`, `password`, `email`, `datedenaissance`, `proffession`)
- VALUES ('$nom', '$prenom', '$username', '$password', '$email', '$datedenaissance', '$proffession')";
-
+VALUES ('$nom', '$prenom', '$pseudo', '$password', '$email', '$datedenaissance', '$proffession')";
+if($typeofuser == 'worker') {
+  mysqli_query($conn, $sql2) ;
 }
-if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) ) {
+if (mysqli_query($conn, $sql) ) {
    echo "New record created successfully";
+
 } else {
    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

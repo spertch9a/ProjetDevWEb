@@ -69,7 +69,11 @@
 					<input type="radio" name="typeofuser" value="both" id="both">
 					<span>Both</span>
 				 </label>
+<div id="professionDiv">
 
+	<label for="proffession" id="proffession">Veuillez saisir vortre proffession</label>
+	<input name="proffession" type="text" id="proffession" placeholder="ex: Plomberie">
+</div>
 
         <br>
 
@@ -83,8 +87,19 @@
 
  <script type="text/javascript" src="materialize.min.js"></script>
  <script type="text/javascript">
+ var checkBoxes = document.getElementsByName('typeofuser');
+ var professionDiv = document.getElementById('professionDiv');
+ professionDiv.style.display = 'none';
 
+ for (var i = 0; i < checkBoxes.length; i++) {
+   checkBoxes[i].addEventListener("click", function(evt) {
+     if(document.getElementById('worker').checked) {
+       professionDiv.style.display = 'block';
+     } else {
+       professionDiv.style.display = 'none';
+     }
 
- </script>
+   })
+ } </script>
 </body>
 </html>
