@@ -24,7 +24,7 @@
 </div> <br>
 <div class="page">
 
-
+<h1 style="">Liste des employeurs</h1> <br>
  <table class="highlight">
  <tr>
   <th>Identifiant</th>
@@ -39,13 +39,15 @@ $conn = mysqli_connect("localhost", "root", "root", "devweb");
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT username, nom, prenom ,email, proffession FROM workers";
+  $sql = "SELECT username, nom, prenom ,email, proffession FROM workers  ";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["username"]. "</td><td>" . $row["nom"] . "</td><td>"
-. $row["prenom"]. "</td><td>" . $row["proffession"]. "</td><td>" . $row["email"]. "</td></tr>";
+. $row["prenom"]. "</td><td>" . $row["proffession"]. "</td><td>"
+
+. $row["email"].  "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }

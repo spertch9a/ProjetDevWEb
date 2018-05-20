@@ -2,9 +2,13 @@
 	width: 920px;
 	margin-right: 150px;
 	margin-left: 150px;
- /*background: #deb887;
- //couleur a été changé
+
 */ background: #90caf9;
+}
+.content {
+	width: 920px;
+	margin-right: 150px;
+	margin-left: 150px
 }
 #nav{
 	background: #d32f2f ;
@@ -20,7 +24,7 @@ a:hover{
 
 table {
  border-collapse: collapse;
- width: 100%;
+ width: 90%;
  color: #588c7e;
  font-family: monospace;
  font-size: 25px;
