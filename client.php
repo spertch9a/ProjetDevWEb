@@ -12,9 +12,9 @@
 	<nav class="nav-wrapper" id="nav">
 		<ul>
 			<li><a href="accueil.html"> Accueil </a></li>
-			<li><a href="client.html"> Client </a></li>
-			<li><a href="workers.html"> Employé </a></li>
-			<li><a href="inscription.html"> S'inscire </a></li>
+			<li><a href="client.php"> Client </a></li>
+			<li><a href="workers.php"> Employé </a></li>
+			<li><a href="inscription.php"> S'inscire </a></li>
 			<li> <img id="tel" src="téléchargement.png"> N° local 041 35 26 94 </li>
 		</ul>
 	</nav>
