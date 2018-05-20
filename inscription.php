@@ -20,7 +20,7 @@
 		</ul>
 	</nav>
 
-    <form  method="post" action="traitement.php" target="_blank">
+    <form  method="post" action="traitement.php">
 
        <br>    <!-- First name: -->
 

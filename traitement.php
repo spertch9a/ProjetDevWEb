@@ -1,44 +1,51 @@
 <?php
-//
-// try {
-//   $connection = new PDO('mysql:host = localhost; dbname=devweb',
-//   //login username
-//     'root',
-//   //password
-//     'root'
-//   );
-//
-// $nom= $_POST['nom'];
-// $prenom = $_POST['prenom'];
-// $username= $_POST['username'];
-//
-//
-// //requete d'insertion
-// $requete = $connection->prepare("INSERT INTO user (nom,prenom,username) VALUES ('oussa','ous','use')");
-// $requete->execute();
-// // $requete = "INSERT INTO user (nom,prenom,username,password,email,datedenaissance)
-// // $requete = "INSERT INTO user (nom,prenom,username)
-// // VALUES ('oussa','ous','use')";
-//
-// // $connection->exec($requete);
-// echo 'Insertion faite avec succés';
-// }
-// catch (Exception $e) {
-//   echo 'Erreur : ' . $e->getMessage();
-// }
-//
-// //execution de la requete
+
+$username = filter_input(INPUT_POST, 'username');
+
+$datedenaissance = _POST['datedenaissance'];
+$password = filter_input(INPUT_POST, 'password');
+
+
+
+
+if (!empty($username)){
+if (!empty($password)){
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "root";
+$dbname = "devweb";
+
+// Create connection
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+if (mysqli_connect_error()){
+ die('Connect Error ('. mysqli_connect_errno() .') '
+   . mysqli_connect_error());
+}
+else{
+ $sql = "INSERT INTO user (nom,prenom,username,password,email,datedenaissance)
+ values ('$firstname','$lastname','$username','$password',,'$email','$datedenaissance','$typeofuser')";
+
+ if ($conn->query($sql)){
+   echo "New record is inserted sucessfully";
+ }
+ else{
+   echo "Error: ". $sql ."
+". $conn->error;
+ }
+ $conn->close();
+}
+}
+else{
+ echo "Password should not be empty";
+ die();
+}
+}
+else{
+ echo "Username should not be empty";
+ die();
+}
+
+
 
  ?>
-
- <?php
-$conn = mysqli_connect("localhost", "root", "root", "company");
-  // Check connection
-  if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-  }
-  $sql = "INSERT INTO user (nom,prenom,username) VALUES ('oussa','ous','use')";
-  $result = $conn->query($sql);
-
-$conn->close();
-?>

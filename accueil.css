@@ -1,24 +1,32 @@
+body{
+	background-color: #009688;
+}
 .page{
 	width: 920px;
 	margin-right: 150px;
 	margin-left: 150px;
- /*background: #deb887;
- //couleur a été changé
-*/ background: #90caf9;
+ background: #80deea;
 }
 #nav{
 	background: #d32f2f ;
+	margin-top: 10px;
+	clear: both;
 }
 header{
-	width: 900px;
-	height: 180px; 
+	width: 920px;
+	height: auto;
 	text-align: center;
+}
+#images{
+	width: 460px;
+	height: auto;
+	float: left;
 }
 h1{
 	color: #ff0000;
 }
 #section{
-	width: 500px;
+	width: 550px;
 	height: 450px;
 	float: left;
 	border : double;
@@ -36,13 +44,14 @@ h1{
 	margin-top: 0px;
 	border : double;
 	margin-bottom: 30px;
-	margin-right: 10px;
+	margin-right: 30px;
 	margin-top: 10px;
 	padding-left: 10px;
+	list-style-type: square;
 }
 footer{
 	width: 890px;
-	height: 180px;
+	height: 145px;
 	clear: both;
 	margin-top: 30px;
 	border-style: double;
@@ -53,6 +62,7 @@ footer{
 	float: left;
 	margin-left: 20px;
 	margin-right: 20px;
+
 }
 #footers li{
 	list-style-type: square;
@@ -81,15 +91,25 @@ a:hover{
 #prec{
 	float: left;
 	margin-left: 10px;
+	margin-top: 15px;
 }
 #suiv{
 	float: left;
 	margin-left: 240px;
+	margin-top: 15px;
 }
 #h3{
-	font-size: 15px;
+	font-size: 20px;
 	color: #8b0000;
 	text-decoration: underline;
+	font-style: italic;
+}
+#h3side{
+	font-size: 20px;
+	color: #8b0000;
+	text-decoration: underline;
+	font-style: italic;
+	padding-left: 1px;
 }
 section li{
 	list-style-type: square;
